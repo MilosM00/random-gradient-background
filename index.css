@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, rgb(0, 127, 255), rgb(23, 177, 105));
+}
+
+.center{
+    display: grid;
+    place-items: center;
+
+    padding-top: 200px;
+}
+
+.inline{
+    display: flex;
+}
+
+.space{
+    padding: 0 10px;
+}
+
+.change-background{
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.change-background:hover{
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.first-text,
+.second-text{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.input-first,
+.input-second{
+    padding: 10px;
+    font-family: sans-serif;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.copy-first,
+.copy-second{
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    font-family: sans-serif;
+    cursor: pointer;
+}
