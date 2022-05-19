@@ -75,3 +75,10 @@ input:focus{
     font-family: sans-serif;
     cursor: pointer;
 }
+
+@media (max-width: 342px) {
+    .input-first,
+    .input-second{
+        width: 170px;
+    }
+}
