@@ -8,21 +8,25 @@ const buttonCopyFirst = document.querySelector(`.copy-first`);
 const buttonCopySecond = document.querySelector(`.copy-second`);
 const body = document.querySelector(`body`);
 
-
+let x;
+let y;
 const randomNumers = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const radnomColorOne = () => {
-    return `rgb(${randomNumers(0, 255)}, ${randomNumers(0, 255)}, ${randomNumers(0, 255)})`;
+    x = `rgb(${randomNumers(0, 255)}, ${randomNumers(0, 255)}, ${randomNumers(0, 255)})`;
 };
 
 const radnomColorTwo = () => {
-    return `rgb(${randomNumers(0, 255)}, ${randomNumers(0, 255)}, ${randomNumers(0, 255)})`;
+    y = `rgb(${randomNumers(0, 255)}, ${randomNumers(0, 255)}, ${randomNumers(0, 255)})`;
 };
 
 buttonChangeBackground.addEventListener(`click`, () =>{
-    body.style.background = `linear-gradient(to right, ${radnomColorOne()}, ${radnomColorTwo()})`;
-    inputFirst.value = radnomColorOne();
-    inputSecond.value = radnomColorTwo();
+    radnomColorOne();
+    radnomColorTwo();
+
+    body.style.background = `linear-gradient(to right, ${x}, ${y})`;
+    inputFirst.value = x;
+    inputSecond.value = y;
 });
 
 buttonCopyFirst.addEventListener(`click`, () =>{
