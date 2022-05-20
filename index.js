@@ -21,12 +21,13 @@ const radnomColorTwo = () => {
 };
 
 buttonChangeBackground.addEventListener(`click`, () =>{
-    radnomColorOne();
-    radnomColorTwo();
+    changeBackground();
+});
 
-    body.style.background = `linear-gradient(to right, ${x}, ${y})`;
-    inputFirst.value = x;
-    inputSecond.value = y;
+body.addEventListener(`keypress`, (e) =>{
+    if (e.key === 'Enter') {
+        changeBackground();
+      }
 });
 
 buttonCopyFirst.addEventListener(`click`, () =>{
@@ -38,3 +39,12 @@ buttonCopySecond.addEventListener(`click`, () =>{
     inputSecond.select();
     document.execCommand(`copy`);
 });
+
+const changeBackground = () =>{
+    radnomColorOne();
+    radnomColorTwo();
+
+    body.style.background = `linear-gradient(to right, ${x}, ${y})`;
+    inputFirst.value = x;
+    inputSecond.value = y;
+}
